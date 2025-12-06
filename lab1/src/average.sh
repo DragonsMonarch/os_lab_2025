@@ -4,6 +4,7 @@ if [ $# -eq 0 ]; then
 fi  
 sum=0
 count=$#
+echo $count
 for argument in $@; do
 
     if ! [[ "$argument" =~ ^-?[0-9]+(\.[0-9]+)?$ ]]; then  
@@ -12,6 +13,7 @@ for argument in $@; do
     fi  
       
     # Суммируем числа  
+    
     sum=$(($sum + $argument)) 
 done
 average=$(($sum / $count))
